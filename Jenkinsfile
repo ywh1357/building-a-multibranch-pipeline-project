@@ -11,4 +11,9 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            archiveArtifacts artifacts: 'package.json', onlyIfSuccessful: true
+        }
+    }
 }
